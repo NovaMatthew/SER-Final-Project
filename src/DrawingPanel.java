@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
@@ -8,6 +9,8 @@ public class DrawingPanel extends JPanel {
 
 	public DrawingPanel() {
 		super();
+		this.setBackground(Color.BLUE); //for the game, but can be changed to a different color.
+
 		setLayout(null);
 
 	}

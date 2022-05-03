@@ -51,7 +51,19 @@ public class DrawingPanel extends JPanel {
 				@Override
 				public void tick() {
 					// TODO Auto-generated method stub
-
+					if (upPressed) {
+						// do something
+						player.setLocation(player.getX(), player.getY() + 2);
+					} else if (downPressed) {
+						// do something
+						player.setLocation(player.getX(), player.getY() - 2);
+					} else if (leftPressed) {
+						// do something
+						player.setLocation(player.getX() - 2, player.getY());
+					} else if (rightPressed) {
+						// do something
+						player.setLocation(player.getX() + 2, player.getY());
+					}
 				}
 			};
 		} catch (IOException e1) {
@@ -65,19 +77,7 @@ public class DrawingPanel extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				if (upPressed) {
-					// do something
-					player.setLocation(player.getX(), player.getY() + 2);
-				} else if (downPressed) {
-					// do something
-					player.setLocation(player.getX(), player.getY() - 2);
-				} else if (leftPressed) {
-					// do something
-					player.setLocation(player.getX() - 2, player.getY());
-				} else if (rightPressed) {
-					// do something
-					player.setLocation(player.getX() + 2, player.getY());
-				}
+				player.tick();
 			}
 
 		});

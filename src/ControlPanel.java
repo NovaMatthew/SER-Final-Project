@@ -38,6 +38,7 @@ public class ControlPanel extends JPanel {
 			}
 
 		});
+		
 		this.add(button1);
 		this.add(button2);
 

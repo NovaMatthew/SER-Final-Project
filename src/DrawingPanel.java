@@ -12,7 +12,6 @@ public class DrawingPanel extends JPanel {
 		this.setBackground(Color.BLUE); //for the game, but can be changed to a different color.
 
 		setLayout(null);
-
 	}
 
 	@Override

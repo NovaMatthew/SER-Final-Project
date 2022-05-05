@@ -98,7 +98,7 @@ public abstract class Sprite {
      * @param graphics2D The Graphics (brush) object.
      */
     public void paint(Graphics2D graphics2D) {
-        graphics2D.drawImage(this.image, this.x, this.y, this.x + this.width, this.y + this.height, null);
+        graphics2D.drawImage(this.image, this.x, this.y, this.width, this.height, null);
     }
 
     /**

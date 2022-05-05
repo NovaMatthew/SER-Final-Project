@@ -11,8 +11,9 @@ public class App extends JFrame {
 
 		JLabel label = new JLabel("Please Press the Start button to start playing.");
 
+		
+		
 		DrawingPanel drawingPanel = new DrawingPanel();
-
 		ControlPanel controlPanel = new ControlPanel(drawingPanel);
 
 		this.setSize(1000, 800);
@@ -25,7 +26,6 @@ public class App extends JFrame {
 		this.setResizable(false);
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
-
 	}
 
 	public static void main(String[] args) {

@@ -23,7 +23,6 @@ public class ControlPanel extends JPanel {
 				button1.setEnabled(false);
 
 			}
-
 		});
 		button1.setFocusable(false);
 		button2 = new JButton("Pause");

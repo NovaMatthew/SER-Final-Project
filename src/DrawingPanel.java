@@ -21,7 +21,7 @@ public class DrawingPanel extends JPanel {
 	private Sprite enemy, objective, player;
 	private ArrayList<Sprite> enemies = new ArrayList<Sprite>();
 	private Timer timer;
-
+	private int x,y;
 	/*
 	 * NOTE: Can ignore message when running program, for now the sprites intersect
 	 * one another TO-DO: 1. implement random number of enemies (any range is fine)
@@ -103,10 +103,13 @@ public class DrawingPanel extends JPanel {
 				public void actionPerformed(ActionEvent e) {
 					// TODO Auto-generated method stub
 					player.tick();
-				
+					
+					int randn = rand.nextInt(1, 15);
+						
 					for (int i = 0; i < enemies.size(); i++) {
 
 						Sprite enemy = enemies.get(i);
+						
 						enemy.setLocation(enemy.getX(), enemy.getY() + 1);
 						// we don't want the player to leave the screen..
 						if (DrawingPanel.this.getHeight() == player.getY()+ player.getHeight()) {
@@ -137,7 +140,7 @@ public class DrawingPanel extends JPanel {
 
 						if (enemies.size() == 0) {
 							int random = rand.nextInt(1, 15);
-							for (int j = 0; i < random; j++) {
+							for (int j = 0; j < random; j++) {
 
 								try {
 									enemy = new Sprite("./images/mine.png") {
@@ -156,9 +159,9 @@ public class DrawingPanel extends JPanel {
 								}
 
 							}
-
-							enemies.get(i).setY(rand.nextInt(10, 750));
-							enemies.get(i).setX(0);
+							x = rand.nextInt(10, 900);
+							
+							enemies.get(i).setX(x);
 
 						}
 					

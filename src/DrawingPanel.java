@@ -122,7 +122,7 @@ public class DrawingPanel extends JPanel {
 							player.setX(10);
 						}
 
-						if (enemy.getY() + enemy.getHeight() >= DrawingPanel.this.getHeight()) {
+						if (enemy.getY()  > DrawingPanel.this.getHeight()) {
 							enemies.remove(i);
 						}
 						
